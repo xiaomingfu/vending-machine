@@ -6,15 +6,13 @@ import Soda from './Soda';
 import Hotdog from './Hotdog';
 import Chips from './Chips';
 import VendingMachine from './VendingMachine';
+import Navbar from './Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App" >
-        <NavLink to="/">VendingMachine</NavLink>
-        <NavLink to="/soda">Soda</NavLink>
-        <NavLink to="/chips">Chips</NavLink>
-        <NavLink to="/hotdog">Hotdog</NavLink>
+        <Navbar />
         <Switch>
           <Route exact path="/" render={() => <VendingMachine />} />
           <Route exact path="/soda" render={() => <Soda />} />
