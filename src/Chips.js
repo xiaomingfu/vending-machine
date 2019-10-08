@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Message from './Message';
+import chips from './Chips.png';
 
 class Chips extends Component {
     constructor(props) {
@@ -14,9 +16,12 @@ class Chips extends Component {
         return (
             <div className="Chips">
                 <div className="Chips-description">
-                    <p>Bags eaten: {this.state.cnt}</p>
-                    <button onClick={this.countClick}>Eat Eat Eat</button>
-                    <Link to="/">Go Back</Link>
+                    <Message>
+                        <p>Bags eaten: {this.state.cnt}</p>
+                        <button onClick={this.countClick}>Eat Eat Eat</button>
+                        <Link to="/">Go Back</Link>
+                    </Message>
+                    <img src={chips} />
                 </div>
 
             </div>
